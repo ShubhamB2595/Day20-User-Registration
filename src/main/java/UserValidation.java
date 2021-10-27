@@ -52,4 +52,19 @@ public class UserValidation {
 	        	System.out.println("Invalid Email ID: " + email);
 	        }
 		}
+		
+		//method for mobile number as Country code follow by space and 10 digit number
+		public void validMobile(String mobile) {
+							
+			String regexmobile = "^[0-9]{1,2}[' '][0-9]{10}$";
+			Pattern p = Pattern.compile(regexmobile);
+			Matcher matcher = p.matcher(mobile);
+			boolean result = matcher.matches();
+			if(result) {
+				System.out.println("Valid Email ID: " + mobile);
+			}
+	        else {
+	        	System.out.println("Invalid Email ID: " + mobile);
+	        }
+		}
 }
