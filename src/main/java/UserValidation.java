@@ -37,4 +37,19 @@ public class UserValidation {
 	        	System.out.println("Invalid Last Name: " + lastName);
 	        }
 		}
+		
+		//method for Email ID 
+		public void validEmail(String email) {
+					
+			String regexemail = "^[0-9a-zA-Z]+([_+-.][0-9a-zA-Z]+)*+" + "@[0-9a-zA-Z]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2})?$";
+			Pattern p = Pattern.compile(regexemail);
+			Matcher matcher = p.matcher(email);
+			boolean result = matcher.matches();
+			if(result) {
+				System.out.println("Valid Email ID: " + email);
+			}
+	        else {
+	        	System.out.println("Invalid Email ID: " + email);
+	        }
+		}
 }

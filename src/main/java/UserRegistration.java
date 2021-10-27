@@ -8,6 +8,7 @@ public class UserRegistration {
 		UserValidation validate = new UserValidation();
 		validate.validFirstName("Shubham");
 		validate.validLastName("Bhele");
+		validate.validEmail("abc..2002@gmail.com");
 	}
 
 }
