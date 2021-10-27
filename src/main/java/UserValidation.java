@@ -73,10 +73,11 @@ public class UserValidation {
 		 * Rule1 – minimum 8 Characters
 		 * Rule2 - at least 1 upper case
 		 * Rule3 - at least 1 numeric number
+		 * Rule4 - should have 1 special character
 		 */
 		public void validPassword(String password) {
 									
-			String regexPass = "^[A-Z0-9a-z]*[A-Z]*[0-9][A-Z0-9a-z]*{8,}$";
+			String regexPass = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,}";
 			Pattern p = Pattern.compile(regexPass);
 			Matcher matcher = p.matcher(password);
 			boolean result = matcher.matches();
