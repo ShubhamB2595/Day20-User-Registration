@@ -61,10 +61,28 @@ public class UserValidation {
 			Matcher matcher = p.matcher(mobile);
 			boolean result = matcher.matches();
 			if(result) {
-				System.out.println("Valid Email ID: " + mobile);
+				System.out.println("Valid Mobile Number: " + mobile);
 			}
 	        else {
-	        	System.out.println("Invalid Email ID: " + mobile);
+	        	System.out.println("Invalid Mobile Number: " + mobile);
 	        }
+		}
+		
+		//method for password as Rules 
+		/*
+		 * Rule1 – minimum 8 Characters
+		 */
+		public void validPassword(String password) {
+									
+			String regexPass = "^[a-zA-Z]{8,}$";
+			Pattern p = Pattern.compile(regexPass);
+			Matcher matcher = p.matcher(password);
+			boolean result = matcher.matches();
+			if(result) {
+				System.out.println("Valid Password: " + password);
+			}
+	        else {
+		       	System.out.println("Invalid Password: " + password);
+	       }
 		}
 }

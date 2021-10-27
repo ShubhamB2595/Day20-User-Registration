@@ -10,6 +10,7 @@ public class UserRegistration {
 		validate.validLastName("Bhele");
 		validate.validEmail("shubhambhele95@gmail.com");
 		validate.validMobile("91 8698348143");
+		validate.validPassword("password");
 	}
 
 }
