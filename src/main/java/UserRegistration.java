@@ -5,12 +5,18 @@ public class UserRegistration {
 		
 		System.out.println("Welcome to User registration System Day20");
 		
+		//obj
 		UserValidation validate = new UserValidation();
+		
 		validate.validFirstName("Shubham");
 		validate.validLastName("Bhele");
 		validate.validEmail("shubhambhele95@gmail.com");
 		validate.validMobile("91 8698348143");
 		validate.validPassword("Pass9@word");
+		
+		//Obj
+		SampleEmailValidation sampleEmail = new SampleEmailValidation();
+		sampleEmail.validateEmail();
 	}
 
 }
