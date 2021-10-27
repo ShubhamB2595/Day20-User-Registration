@@ -7,6 +7,7 @@ public class UserRegistration {
 		
 		UserValidation validate = new UserValidation();
 		validate.validFirstName("Shubham");
+		validate.validLastName("Bhele");
 	}
 
 }

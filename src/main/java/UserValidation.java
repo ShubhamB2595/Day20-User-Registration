@@ -23,5 +23,18 @@ public class UserValidation {
         }
 	}
 	
-	
+	//method for last name
+		public void validLastName(String lastName) {
+			
+			String regexLN = "^[A-Z]{1}[a-zA-Z]{2,}";
+	        Pattern p = Pattern.compile(regexLN);
+	        Matcher matcher = p.matcher(lastName);
+	        boolean result = matcher.matches();
+	        if(result) {
+	        	System.out.println("Valid Last Name: " + lastName);
+	        }
+	        else {
+	        	System.out.println("Invalid Last Name: " + lastName);
+	        }
+		}
 }
