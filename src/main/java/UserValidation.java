@@ -74,7 +74,7 @@ public class UserValidation {
 		 */
 		public void validPassword(String password) {
 									
-			String regexPass = "^[a-zA-Z]{8,}$";
+			String regexPass = "^[A-Z0-9a-z]*[A-Z][A-Z0-9a-z]*{8,}$";
 			Pattern p = Pattern.compile(regexPass);
 			Matcher matcher = p.matcher(password);
 			boolean result = matcher.matches();
