@@ -44,7 +44,8 @@ public class SampleEmailValidation {
 	
 		//Constructor
 		public SampleEmailValidation() {
-			
-		}
-	
+
+	}
+
+
 }
