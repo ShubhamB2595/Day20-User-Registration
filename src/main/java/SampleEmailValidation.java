@@ -35,11 +35,10 @@ public class SampleEmailValidation {
 		
 		//object and calling the validEmail method for checking above emails
 		UserValidation emailcheck = new UserValidation();
-		int arrLength = emails.size();
-		for(int i=0; i<arrLength; i++) {
-			emailcheck.validEmail(emails.get(i));
-		}
 		
+		emails.forEach(
+				(n) -> System.out.println( n + " : " + emailcheck.email.test(n) )
+				);
 	}
 	
 		//Constructor

@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -16,7 +14,7 @@ public class ParameterizedTesting {
 	@Parameters(name = "{index}: testEmails = {0}")
 	public static Object[] data() {
 		return new Object[] { 
-				// Valid emails
+				// Valid email's
 				"abc@yahoo.com",
 				"abc-100@yahoo.com",
 				"abc.100@yahoo.com",
@@ -27,7 +25,7 @@ public class ParameterizedTesting {
 				"abc@gmail.com.com",
 				"abc+100@gmail.com",
 			 
-				//	Invalid emails
+				//	Invalid email's
 				"abc",
 				"abc@.com.my",
 				"abc123@gmail.a",
@@ -47,7 +45,7 @@ public class ParameterizedTesting {
     @Test
     public void testingEmials() {
     	
-    	emailTesting.validEmail(emailID);
+    	emailTesting.email.test(emailID);
     	
     }
 
